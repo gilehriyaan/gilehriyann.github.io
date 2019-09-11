@@ -1,0 +1,756 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>{% if page.category == 'home' or page.layout == 'products-article' %}
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>{% endif %}{% if page.layout == 'products-article' %}
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>{% endif %}
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/flowerybag-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="FLOWERYBAG">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <style amp-custom>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #606060;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  color: #19110b;
+  text-decoration: none;
+}
+a:hover {
+  color: #19110b;
+  text-decoration: none;
+}
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: 0;
+  border-top: 1px solid #ededed;
+}
+/*Typography*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.3;
+  color: #606060;
+  margin-top: 0;
+}
+
+h1, .h1 {
+  margin-bottom: 28px;
+}
+
+h2, .h2 {
+  margin-bottom: 24px;
+}
+
+h3, .h3 {
+  margin-bottom: 20px;
+}
+
+h4, .h4 {
+  margin-bottom: 17px;
+}
+
+h5, h6, .h5, .h6 {
+  margin-bottom: 12px;
+}
+
+h1, .h1 {
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h3, .h3 {
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h4, .h4 {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+
+h5, .h5 {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+
+h6, .h6 {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: none;
+}
+
+p {
+  margin: 0 0 20px;
+}
+small,
+.small {
+  font-size: 90%;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-black {
+  color: #19110b;
+}
+.bg-black {
+    background-color: #19110b;
+    color: #FFFFFF;
+}
+.bg-dark {
+  background-color: #f5f5f5;
+}
+.bg-nav {
+  background-color: #efefef;
+}
+.bg-nav-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*Bootstrap*/
+.container {
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width:768px) {
+  .container {
+  width:750px
+}
+}
+@media (min-width:992px) {
+  .container {
+  width:970px
+}
+}
+@media (min-width:1200px) {
+  .container {
+  width:1170px
+}
+}
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+  padding-right:15px;
+  padding-left:15px;
+  box-sizing: border-box
+}
+@media (min-width:992px) {
+  .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+  float:left
+}
+.col-md-12 {
+  width:100%
+}
+.col-md-11 {
+  width:91.66666667%
+}
+.col-md-10 {
+  width:83.33333333%
+}
+.col-md-9 {
+  width:75%
+}
+.col-md-8 {
+  width:66.66666667%
+}
+.col-md-7 {
+  width:58.33333333%
+}
+.col-md-6 {
+  width:50%
+}
+.col-md-5 {
+  width:41.66666667%
+}
+.col-md-4 {
+  width:33.33333333%
+}
+.col-md-3 {
+  width:25%
+}
+.col-md-2 {
+  width:16.66666667%
+}
+.col-md-1 {
+  width:8.33333333%
+}
+}
+@media (min-width:1200px) {
+  .col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9 {
+  float:left
+}
+.col-lg-12 {
+  width:100%
+}
+.col-lg-11 {
+  width:91.66666667%
+}
+.col-lg-10 {
+  width:83.33333333%
+}
+.col-lg-9 {
+  width:75%
+}
+.col-lg-8 {
+  width:66.66666667%
+}
+.col-lg-7 {
+  width:58.33333333%
+}
+.col-lg-6 {
+  width:50%
+}
+.col-lg-5 {
+  width:41.66666667%
+}
+.col-lg-4 {
+  width:33.33333333%
+}
+.col-lg-3 {
+  width:25%
+}
+.col-lg-2 {
+  width:16.66666667%
+}
+.col-lg-1 {
+  width:8.33333333%
+}
+}
+.container:after,.container:before,.row:after,.row:before {
+  display:table;
+  clear:both;
+  content:" "
+}
+/*Navigation*/
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease; }
+
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent; }
+  .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+  margin-top: 0; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start; }
+
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto; }
+
+.luxbar-brand {
+  font-size: 1.6em;
+  padding: 18px 24px 18px 24px; }
+
+.luxbar-menu {
+  min-height: 58px;
+  transition: 0.6s ease;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.luxbar-menu a,
+.luxbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+.luxbar-item {
+  height: 58px; }
+  .luxbar-item a {
+  padding: 18px 24px 18px 24px;
+  display: block; }
+
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer; }
+  .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  content: '';
+  position: absolute; }
+  .luxbar-hamburger span::before {
+  margin-top: -8px; }
+  .luxbar-hamburger span::after {
+  margin-top: 8px; }
+
+.luxbar-checkbox {
+  display: none; }
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: hidden;
+  height: 58px; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  transition: height 0.6s ease;
+  height: 100vh;
+  overflow: auto; }
+
+.dropdown {
+  position: relative;
+  height: auto;
+  min-height: 58px; }
+  .dropdown:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 100%; }
+  .dropdown > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid; }
+  .dropdown > ul {
+  display: block;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0; }
+  .dropdown > ul .luxbar-item {
+    min-width: 100%;
+    height: 29px;
+    padding: 5px 10px 5px 40px; }
+    .dropdown > ul .luxbar-item a {
+    min-height: 29px;
+    line-height: 29px;
+    padding: 0; }
+
+@media screen and (min-width: 768px) {
+  .luxbar-navigation {
+  flex-flow: row;
+  justify-content: flex-end; }
+
+  .luxbar-hamburger {
+  display: none; }
+
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: visible; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  height: 58px; }
+
+  .luxbar-menu .luxbar-item {
+  border-top: 0; }
+
+  .luxbar-menu-right .luxbar-header {
+  margin-right: auto; }
+
+  .dropdown {
+  height: 58px; }
+  .dropdown:hover > ul {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    padding: 0; }
+  .dropdown > ul {
+    display: none; }
+    .dropdown > ul .luxbar-item {
+    padding: 5px 10px; }
+    .dropdown > ul .luxbar-item a {
+      white-space: nowrap; } }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg); }
+
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg); }
+
+/*Navigation Color White*/
+.luxbar-menu-white,.luxbar-menu-white .dropdown ul {
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1;
+}
+.luxbar-menu-white .active,.luxbar-menu-white .luxbar-item:hover {
+  background-color: #e7e7e7; }
+.luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
+  background-color: #000000; }
+
+/*image*/
+.image-margin-center {
+  margin: 0 auto 0 auto;
+}
+.img-width-300 {
+    max-width: 300px;
+}
+.img-width-400 {
+    max-width: 400px;
+}
+.img-width-500 {
+    max-width: 500px;
+}
+.img-width-600 {
+    max-width: 600px;
+}
+.img-width-700 {
+    max-width: 700px;
+}
+.img-width-800 {
+    max-width: 800px;
+}
+.img-width-1000 {
+    max-width: 1000px;
+}
+
+/*margin*/
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.margin-top-58 {
+    margin-top: 58px;
+}
+.margin-top-70 {
+    margin-top: 70px;
+}
+.margin-top-80 {
+    margin-top: 80px;
+}
+.margin-btm-20 {
+  margin-bottom: 20px;
+}
+.margin-btm-30 {
+  margin-bottom: 30px;
+}
+.margin-btm-40 {
+  margin-bottom: 40px;
+}
+.margin-btm-50 {
+  margin-bottom: 50px;
+}
+.margin-btm-60 {
+  margin-bottom: 60px;
+}
+.margin-btm-80 {
+  margin-bottom: 80px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+/*Buttons*/
+.button {
+    display:inline-block;
+    padding:13px 20px;
+    margin:0px 0px 10px 0px;
+    font-size:14px;
+    transition:all 250ms ease;
+}
+.button-round {
+    border-radius:30px;
+}
+.button-full {
+    display:block;
+    text-align:center;
+}
+.button:hover {
+    opacity:0.9;
+    transition:all 250ms ease;
+    color: #FFFFFF;
+}
+
+/*Products*/
+.shop-item {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.shop-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-item .shop-thumbnail {
+  position: relative;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.shop-item .shop-thumbnail .item-link {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.shop-item .shop-item-details {
+  display: table;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.shop-item .shop-item-details .shop-item-title {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.shop-item .shop-item-details .shop-item-title {
+  width: 50%;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.shop-item .shop-item-details .shop-item-title > a {
+  color: #999;
+  text-decoration: none;
+}
+
+.shop-item:hover .shop-item-tools {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Base class */
+.social-button {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 18px;
+  margin-bottom: 5px;
+  transition: color .3s;
+  color: #606975;
+  font-size: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.social-button.shape-circle, .social-button.shape-rounded, .social-button.shape-square {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border: 1px solid #e1e7ec;
+  line-height: 35px;
+  text-align: center;
+}
+
+.social-button.shape-circle {
+  border-radius: 50%;
+}
+
+.social-button.shape-rounded {
+  border-radius: 5px;
+}
+
+.social-button:focus {
+  text-decoration: none;
+}
+.sb-light-skin {
+  transition: all .3s;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sb-light-skin:hover, .sb-light-skin:focus {
+  color: #ffffff;
+}
+
+.sb-light-skin.shape-circle, .sb-light-skin.shape-rounded, .sb-light-skin.shape-square {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.sb-light-skin.shape-circle:hover, .sb-light-skin.shape-rounded:hover, .sb-light-skin.shape-square:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+/*Footer*/
+.footer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.footer .column {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 45px 25px;
+}
+.footer .column:nth-of-type(even) {
+  background-color: #f0f0f0;
+}
+@media screen and (max-width: 991px) {
+  .footer .column {
+    display: block;
+    width: 100%;
+    padding: 45px 15px;
+  }
+}
+.footer .copyright {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 0;
+  margin-top: -5px;
+}
+.footer .news {
+  margin: 0 0 6px;
+}
+.widget-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.widget-title small {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  text-transform: none;
+  margin-top: 20px;
+}
+
+.blog-foot-title,
+.blog-foot-title > a {
+  color: #606060;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.blog-foot-title:hover,
+.blog-foot-title > a:hover {
+  color: #999;
+  text-decoration: none;
+}
+/*Error*/
+.error {
+  font-size: 180px;
+  color: #19110b;
+}
+
+/*back to top*/
+.back-to-top {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 1;
+  cursor: pointer;
+}</style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <header id="luxbar" class="luxbar-fixed">
+      <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox">
+      <div class="luxbar-menu luxbar-menu-right luxbar-menu-white">
+        <div class="container">
+          <ul class="luxbar-navigation">
+            <li class="luxbar-header">
+              <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/flowerybag-logo.png" width="280" height="52" class="margin-top-8" alt="FLOWERYBAG Logo"></amp-img></a>
+              <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+            </li>
+            <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a>Products</a>
+              <ul>
+                <li class="luxbar-item {% if page.type-en == 'handbags' %}active{% endif %}"><a href="{{ site.url }}/handbags/">Handbags</a></li>
+              </ul>
+            </li>
+            <li class="luxbar-item {% if page.category == 'support' %}active{% endif %}"><a href="{{ site.url }}/support/">Support</a></li>
+            <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">About FLOWERYBAG</a></li>
+            <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="margin-top-58"></div>
+    {{ content }}
+    <footer class="footer">
+      <div class="column">
+        <h3 class="widget-title">Products</h3>
+        <p class="blog-foot-title"><a href="{{ site.url }}/handbags/">Handbags</a></p>
+      </div>
+      <div class="column">
+        <h3 class="widget-title">About Us</h3>
+        <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/flowerybag-logo-foot.png" width="300" height="100" class="margin-btm-20" alt="FLOWERYBAG Logo"></amp-img></a>
+        <p class="copyright">Copyright © 2019 FLOWERYBAG | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+      </div>
+      <div class="column">
+        <h3 class="widget-title">Contact Us</h3>
+        <p class="blog-foot-title"><i class="fas fa-map-marker-alt margin-right-10"></i>Address: {{ site.address }}</p>
+        <p class="blog-foot-title"><i class="fas fa-phone margin-right-10"></i>Phone: <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
+        <p class="blog-foot-title"><i class="fas fa-envelope margin-right-10"></i>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <a class="social-button shape-circle" href="{{ site.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-button shape-circle" href="{{ site.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="social-button shape-circle" href="{{ site.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-button shape-circle" href="{{ site.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="social-button shape-circle" href="{{ site.pinterest }}" target="_blank"><i class="fab fa-pinterest"></i></a>
+        <a class="social-button shape-circle" href="{{ site.vimeo }}" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+    <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>
+  </body>
+</html>

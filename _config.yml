@@ -1,0 +1,27 @@
+url: https://flowerybag.com
+
+title: FLOWERYBAG
+
+keywords: FLOWERYBAG
+
+description: FLOWERYBAG
+
+address: Guangdong,China
+
+tel: +86-XXXXXXXXXXXX
+
+email: XXXX@flowerybag.com
+
+facebook: https://www.facebook.com/
+
+twitter: https://twitter.com/
+
+youtube: https://www.youtube.com/channel/
+
+pinterest: https://www.pinterest.com/
+
+instagram: https://www.instagram.com/
+
+exclude:
+  - README.md
+  - style.css
