@@ -27,7 +27,7 @@ layout: pages
     <h2>{{ page.title }}</h2>
     <p>Brand: {{ page.brand }}</p>
     {{ content }}
-    <a href="{{ page.shop }}" target="_blank" class="button bg-black button-round">Buy Now</a>
+    <a href="mailto:{{ site.email }}?subject=Buy {{ page.brand } {{ page.title }}" target="_blank" class="button bg-black button-round">Buy Now</a>
   </div>{% if page.video == 'wu' %}{% else %}
   <div class="col-lg-12 margin-btm-40">
     <amp-vimeo data-videoid="{{ page.video }}" layout="responsive" width="16" height="9"></amp-vimeo>
