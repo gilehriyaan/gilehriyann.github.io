@@ -5,6 +5,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>{% if page.category == 'home' or page.layout == 'products-article' %}
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>{% endif %}{% if page.layout == 'products-article' %}
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>{% endif %}
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
@@ -717,6 +718,8 @@ small,
             <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a>Products</a>
               <ul>
                 <li class="luxbar-item {% if page.type-en == 'handbags' %}active{% endif %}"><a href="{{ site.url }}/handbags/">Handbags</a></li>
+                <li class="luxbar-item {% if page.type-en == 'accessory' %}active{% endif %}"><a href="{{ site.url }}/accessory/">Accessory</a></li>
+                <li class="luxbar-item {% if page.type-en == 'procurement-service' %}active{% endif %}"><a href="{{ site.url }}/procurement-service/">Procurement Service</a></li>
               </ul>
             </li>
             <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">About FLOWERYBAG</a></li>
@@ -731,6 +734,8 @@ small,
       <div class="column">
         <h3 class="widget-title">Products</h3>
         <p class="blog-foot-title"><a href="{{ site.url }}/handbags/">Handbags</a></p>
+        <p class="blog-foot-title"><a href="{{ site.url }}/accessory/">Accessory</a></p>
+        <p class="blog-foot-title"><a href="{{ site.url }}/procurement-service/">Procurement Service</a></p>
       </div>
       <div class="column">
         <h3 class="widget-title">About Us</h3>
