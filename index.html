@@ -3,10 +3,8 @@ layout: default
 category: home
 full_title: FLOWERYBAG
 ---
-<amp-carousel width="1920" height="700" layout="responsive" type="slides" autoplay delay="3500">
-  <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/home/billboard-1.jpg" width="1920" height="700" layout="responsive" alt="Cat Toy"></amp-img></a>
-  <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/home/billboard-2.jpg" width="1920" height="700" layout="responsive" alt="Cat Teaser"></amp-img></a>
-  <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/home/billboard-3.jpg" width="1920" height="700" layout="responsive" alt="Cat Tree"></amp-img></a>
+<amp-carousel width="1920" height="700" layout="responsive" type="slides" autoplay delay="3500">{% for post in site.categories["products"] %}{% if post.home == 'home' %}
+  <a href="{{ site.url }}{{ post.url }}"><amp-img src="{{ site.url }}/images/home/billboard-{{ post.image }}.jpg" width="1920" height="700" layout="responsive" alt="{{ post.title }}"></amp-img></a>{% endif %}{% endfor %}
 </amp-carousel>
 <div class="container margin-top-40 margin-btm-20">
   <h3 class="text-center">Products</h3>
