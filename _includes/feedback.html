@@ -1,0 +1,32 @@
+<h3 class="margin-top-30">Get a Free Quote</h3>
+<form method="post" action-xhr="{{ site.oswweb-mail-url }}/flowerybag-com-feedback.php" target="_blank">
+  <fieldset>
+    <label>
+      <span>Products Url:</span>
+      <input class="form-control" type="text" name="url" value="{{ site.url }}{{ page.url }}" readonly>
+    </label>
+    <br>
+    <label>
+      <span>Name:</span>
+      <input class="form-control" type="text" name="name" required>
+    </label>
+    <br>
+    <label>
+      <span>Email:</span>
+      <input class="form-control" type="email" name="email" required>
+    </label>
+    <br>
+    <label>
+      <span>Message:</span>
+      <input class="form-control" type="text" name="xinxi" required>
+    </label>
+    <br>
+    <p class="text-center"><input class="input-btn btn-primary" type="submit" value="Send it NOW"></p>
+  </fieldset>
+  <div submit-success>
+    <template type="amp-mustache">Successful</template>
+  </div>
+  <div submit-error>
+    <template type="amp-mustache">Successful</template>
+  </div>
+</form>
